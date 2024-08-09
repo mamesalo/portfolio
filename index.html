@@ -4,6 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        max-height: 100vh;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      form {
+        background-color: gainsboro;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        opacity: 0.9;
+        width: 500px;
+      }
+      form h1 {
+        text-align: center;
+      }
+      input {
+        padding: 16px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+      }
+      button {
+        padding: 14px;
+        color: white;
+        background-color: #008080;
+        border: none;
+      }
+      .remember-forget {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .forget {
+        color: blue;
+      }
+      .remember-forget label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <form action="">
+      <h1>Account Login</h1>
+      <input type="text" placeholder="User Name" />
+      <input type="password" placeholder="Password" />
+      <button>LOGIN</button>
+      <div class="remember-forget">
+        <label>
+          <input type="checkbox" />
+          remember me
+        </label>
+        <p class="forget">Forget Password?</p>
+      </div>
+    </form>
+  </body>
 </html>
