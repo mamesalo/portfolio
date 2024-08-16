@@ -5,75 +5,339 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
-        background-image: url(bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        max-height: 100vh;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+      html {
+        scroll-behavior: smooth;
       }
-      form {
-        background-color: gainsboro;
-        border-radius: 20px;
-        padding: 20px;
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .hero {
+        position: relative;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        opacity: 0.9;
-        width: 500px;
+        z-index: 1;
       }
-      form h1 {
-        text-align: center;
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(hero.jpg);
+        background-size: cover; /* or other background properties */
+        opacity: 0.5; /* Adjust the opacity value */
+        z-index: -1;
       }
-      input {
-        padding: 16px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-      }
-      button {
-        padding: 14px;
-        color: white;
-        background-color: #008080;
-        border: none;
-      }
-      .remember-forget {
+      .hero header {
+        padding: 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
-      .forget {
-        color: blue;
-        cursor: pointer;
+      .hero header h3 {
+        color: white;
+        letter-spacing: 1px;
       }
-      .forget:hover {
-        text-decoration: underline;
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 15px;
       }
-      .remember-forget label {
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .hero-content h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+      .hero-content p {
+        font-size: 20px;
+      }
+      .hero-content a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        margin-top: 20px;
+        background-color: #168de2;
+        padding: 12px 50px;
+        border-radius: 5px;
+      }
+      @media (max-width: 800px) {
+        .hero-content h1 {
+          font-size: 40px;
+        }
+        .hero-content p {
+          font-size: 15px;
+        }
+        .hero-content a {
+          padding: 10px 30px;
+        }
+      }
+      .title {
+        color: rgb(25, 25, 25);
+      }
+      .section-description {
+        color: rgb(82, 80, 80);
+        text-align: center;
+        max-width: 800px;
+        line-height: 25px;
+        padding: 0 15px;
+      }
+      .break-line {
+        width: 100px;
+        height: 2px;
+        background-color: #168de2;
+      }
+      .our-work {
+        min-height: 100vh;
+        padding-top: 50px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .our-work-img {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+        padding-top: 50px;
+        margin: 0 auto;
+      }
+      .img-contanier {
+        overflow: hidden;
+        display: flex;
+        gap: 15px;
+      }
+      .img-normal {
+        height: 200px;
+        object-fit: cover;
+        flex-basis: 45%;
+      }
+      .img-wider {
+        width: 100%;
+        flex-basis: 55%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .features {
+        min-height: 100vh;
+        background-color: ghostwhite;
         display: flex;
         align-items: center;
-        gap: 5px;
+        flex-direction: column;
+        padding-top: 50px;
+      }
+      .grid {
+        padding-top: 50px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 80%;
+        margin: 0 auto;
+      }
+      @media (max-width: 800px) {
+        .grid {
+          flex-direction: column;
+        }
+      }
+      .grid li {
+        max-width: 250px;
+      }
+      .grid li h4 {
+        text-align: center;
+        color: rgb(25, 25, 25);
+      }
+      .grid li p {
+        color: rgb(84, 83, 83);
+        text-align: center;
+        line-height: 25px;
+      }
+      .contact {
+        background-color: ghostwhite;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 50px;
+      }
+      @media (max-width: 800px) {
+        .contact {
+          padding-top: 70px;
+        }
+      }
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      form input {
+        outline: none;
+        border: 2px solid gainsboro;
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+      }
+      form a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        background-color: #168de2;
+        padding: 10px 50px;
+        border-radius: 5px;
+      }
+      @media (max-width: 800px) {
+        form {
+          flex-direction: column;
+        }
+      }
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        background-color: #414a4f;
+        padding: 60px 0;
+      }
+      footer ul {
+        display: flex;
+        margin-bottom: 25px;
+        font-size: 32px;
+      }
+      footer ul li {
+        margin: 0 8px;
+      }
+      footer p {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 10px;
+      }
+      footer p a {
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        footer {
+          padding: 80px 15px;
+        }
       }
     </style>
   </head>
   <body>
-    <form action="">
-      <h1>Account Login</h1>
-      <input type="text" placeholder="User Name" />
-      <input type="password" placeholder="Password" />
-      <button>LOGIN</button>
-      <div class="remember-forget">
-        <label>
-          <input type="checkbox" />
-          remember me
-        </label>
-        <p class="forget">Forget Password?</p>
+    <section class="hero">
+      <header>
+        <h3>Website logo</h3>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#our-work">products</a></li>
+            <li><a href="#features">About</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="hero-content">
+        <h1>Responsive Template Page</h1>
+        <p>Full Stack traning Course</p>
+        <a href="">Download It Here</a>
       </div>
-    </form>
+    </section>
+    <section class="our-work" id="our-work">
+      <h1 class="title">Some Of Our Work</h1>
+      <p class="section-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, dicta
+        consectetur optio corrupti eius praesentium iste id? Voluptates eos
+        veniam dolores velit ipsam, non harum impedit sit! Quasi.
+      </p>
+      <hr class="break-line" />
+      <div class="our-work-img">
+        <div class="img-contanier">
+          <img class="img-normal" src="coast.jpg" alt="" />
+          <img class="img-wider" src="island.jpg" alt="" />
+        </div>
+        <div class="img-contanier">
+          <img class="img-wider" src="balloon.jpg" alt="" />
+          <img class="img-normal" src="mountain.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h1 class="title">Features and services</h1>
+      <p class="section-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis
+        et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam
+        dictum sapien, id sagittis augue malesuada eu.
+      </p>
+      <hr class="break-line" />
+
+      <ul class="grid">
+        <li>
+          <h4>Photography</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
+            felis et ipsum bibendum ultrices vitae pulvinar velit.
+          </p>
+        </li>
+        <li>
+          <h4>Web Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
+            felis et ipsum bibendum ultrices vitae pulvinar velit.
+          </p>
+        </li>
+        <li>
+          <h4>Content Editing</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
+            felis et ipsum bibendum ultrices vitae pulvinar velit.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="contact" id="contact">
+      <h1 class="title">Join Our Newsletter</h1>
+      <p class="section-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis
+        et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam
+        dictum sapien, id sagittis augue malesuada eu.
+      </p>
+      <hr />
+      <form>
+        <input type="email" placeholder="Email" />
+        <a href="#" class="btn">Subscribe now</a>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>
+        Made by
+        <a
+          href="https://www.linkedin.com/in/mohammed-saleh-27787624a/"
+          target="_blank"
+          >Mohammed Saleh</a
+        >. images courtesy to
+        <a href="http://unsplash.com/" target="_blank">unsplash</a>.
+      </p>
+      <p>No attribution required. you can remove this footer.</p>
+    </footer>
   </body>
 </html>
