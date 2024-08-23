@@ -5,339 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
       body {
-        padding: 0;
         margin: 0;
-        box-sizing: border-box;
-        background-color: black;
+        padding: 0;
         font-family: Arial, Helvetica, sans-serif;
       }
-      .hero {
-        position: relative;
+      .landing-section {
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url(hero.jpg);
-        background-size: cover; /* or other background properties */
-        opacity: 0.5; /* Adjust the opacity value */
-        z-index: -1;
-      }
-      .hero header {
-        padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .hero header h3 {
-        color: white;
-        letter-spacing: 1px;
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 15px;
-      }
-      .nav-links a {
-        color: white;
-        text-decoration: none;
-      }
-      .hero-content {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-        color: white;
-      }
-      .hero-content h1 {
-        font-size: 50px;
-        text-align: center;
-      }
-      .hero-content p {
-        font-size: 20px;
-      }
-      .hero-content a {
-        text-decoration: none;
-        color: white;
-        display: block;
-        margin-top: 20px;
-        background-color: #168de2;
-        padding: 12px 50px;
-        border-radius: 5px;
-      }
-      @media (max-width: 800px) {
-        .hero-content h1 {
-          font-size: 40px;
-        }
-        .hero-content p {
-          font-size: 15px;
-        }
-        .hero-content a {
-          padding: 10px 30px;
-        }
-      }
-      .title {
-        color: rgb(25, 25, 25);
-      }
-      .section-description {
-        color: rgb(82, 80, 80);
-        text-align: center;
-        max-width: 800px;
-        line-height: 25px;
-        padding: 0 15px;
-      }
-      .break-line {
-        width: 100px;
-        height: 2px;
-        background-color: #168de2;
-      }
-      .our-work {
-        min-height: 100vh;
-        padding-top: 50px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .our-work-img {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 80%;
-        padding-top: 50px;
-        margin: 0 auto;
-      }
-      .img-contanier {
         overflow: hidden;
+        position: relative;
+        padding: 0 10px;
         display: flex;
-        gap: 15px;
+        flex-direction: column;
       }
-      .img-normal {
-        height: 200px;
-        object-fit: cover;
-        flex-basis: 45%;
-      }
-      .img-wider {
+      .video-background {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
         width: 100%;
-        flex-basis: 55%;
-        height: 200px;
+        height: 100%;
         object-fit: cover;
+        transform: translate(-50%, -50%);
       }
-      .features {
-        min-height: 100vh;
-        background-color: ghostwhite;
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      header {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        padding-top: 50px;
+        justify-content: space-between;
       }
-      .grid {
-        padding-top: 50px;
+      .nav-list {
         list-style: none;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        width: 80%;
-        margin: 0 auto;
-      }
-      @media (max-width: 800px) {
-        .grid {
-          flex-direction: column;
-        }
-      }
-      .grid li {
-        max-width: 250px;
-      }
-      .grid li h4 {
-        text-align: center;
-        color: rgb(25, 25, 25);
-      }
-      .grid li p {
-        color: rgb(84, 83, 83);
-        text-align: center;
-        line-height: 25px;
-      }
-      .contact {
-        background-color: ghostwhite;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-bottom: 50px;
-      }
-      @media (max-width: 800px) {
-        .contact {
-          padding-top: 70px;
-        }
-      }
-      form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-      }
-      form input {
-        outline: none;
-        border: 2px solid gainsboro;
-        padding: 10px;
-        width: 300px;
-        border-radius: 5px;
-      }
-      form a {
-        text-decoration: none;
-        color: white;
-        display: block;
-        background-color: #168de2;
-        padding: 10px 50px;
-        border-radius: 5px;
-      }
-      @media (max-width: 800px) {
-        form {
-          flex-direction: column;
-        }
-      }
-      footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        color: #fff;
-        background-color: #414a4f;
-        padding: 60px 0;
-      }
-      footer ul {
-        display: flex;
-        margin-bottom: 25px;
-        font-size: 32px;
-      }
-      footer ul li {
-        margin: 0 8px;
-      }
-      footer p {
-        text-transform: uppercase;
+        gap: 5px;
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 10px;
+        letter-spacing: 2px;
       }
-      footer p a {
-        color: #fff;
+      .nav-list li {
+        color: rgb(234, 230, 230);
+        text-transform: uppercase;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
       }
-      @media (max-width: 700px) {
-        footer {
-          padding: 80px 15px;
+      .nav-list li:hover {
+        color: rgb(24, 24, 24);
+        background-color: rgb(234, 230, 230);
+      }
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .content h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 40px;
+        text-align: center;
+      }
+      .content a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: rgb(24, 24, 24);
+        background-color: white;
+        padding: 10px 50px;
+        border-radius: 40px;
+        transition: all 0.3s;
+      }
+      .content a:hover {
+        background-color: rgb(3, 90, 90);
+        color: white;
+      }
+      @media (max-width: 720px) {
+        header {
+          flex-direction: column;
         }
       }
     </style>
   </head>
   <body>
-    <section class="hero">
+    <section class="landing-section">
+      <video autoplay muted loop class="video-background">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
       <header>
-        <h3>Website logo</h3>
+        <img class="logo" src="logo.png" alt="" />
         <nav>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#our-work">products</a></li>
-            <li><a href="#features">About</a></li>
-            <li><a href="#contact">Contacts</a></li>
+          <ul class="nav-list">
+            <li>home</li>
+            <li>travel</li>
+            <li>blogs</li>
+            <li>support</li>
           </ul>
         </nav>
       </header>
-      <div class="hero-content">
-        <h1>Responsive Template Page</h1>
-        <p>Full Stack traning Course</p>
-        <a href="">Download It Here</a>
+      <div class="content">
+        <h1>explore the world</h1>
+        <a href="">explore</a>
       </div>
     </section>
-    <section class="our-work" id="our-work">
-      <h1 class="title">Some Of Our Work</h1>
-      <p class="section-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, dicta
-        consectetur optio corrupti eius praesentium iste id? Voluptates eos
-        veniam dolores velit ipsam, non harum impedit sit! Quasi.
-      </p>
-      <hr class="break-line" />
-      <div class="our-work-img">
-        <div class="img-contanier">
-          <img class="img-normal" src="coast.jpg" alt="" />
-          <img class="img-wider" src="island.jpg" alt="" />
-        </div>
-        <div class="img-contanier">
-          <img class="img-wider" src="balloon.jpg" alt="" />
-          <img class="img-normal" src="mountain.jpg" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section class="features" id="features">
-      <h1 class="title">Features and services</h1>
-      <p class="section-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis
-        et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam
-        dictum sapien, id sagittis augue malesuada eu.
-      </p>
-      <hr class="break-line" />
-
-      <ul class="grid">
-        <li>
-          <h4>Photography</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
-            felis et ipsum bibendum ultrices vitae pulvinar velit.
-          </p>
-        </li>
-        <li>
-          <h4>Web Development</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
-            felis et ipsum bibendum ultrices vitae pulvinar velit.
-          </p>
-        </li>
-        <li>
-          <h4>Content Editing</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
-            felis et ipsum bibendum ultrices vitae pulvinar velit.
-          </p>
-        </li>
-      </ul>
-    </section>
-    <section class="contact" id="contact">
-      <h1 class="title">Join Our Newsletter</h1>
-      <p class="section-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis
-        et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam
-        dictum sapien, id sagittis augue malesuada eu.
-      </p>
-      <hr />
-      <form>
-        <input type="email" placeholder="Email" />
-        <a href="#" class="btn">Subscribe now</a>
-      </form>
-    </section>
-    <footer class="footer">
-      <p>
-        Made by
-        <a
-          href="https://www.linkedin.com/in/mohammed-saleh-27787624a/"
-          target="_blank"
-          >Mohammed Saleh</a
-        >. images courtesy to
-        <a href="http://unsplash.com/" target="_blank">unsplash</a>.
-      </p>
-      <p>No attribution required. you can remove this footer.</p>
-    </footer>
   </body>
 </html>
