@@ -3,88 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="bootstrap-5.3.3-dist/css/bootstrap-utilities.css"
-    />
+    <title>Expandable Bootstrap Card</title>
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
-    <style>
-      .table tbody tr:last-child {
-        border-bottom: transparent;
-      }
-    </style>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
   </head>
   <body>
     <div class="container mt-5">
-      <!-- First Table -->
-      <table class="table">
-        <thead class="table-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Second Table -->
-      <table class="table">
-        <thead class="table-secondary">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="card" style="width: 18rem">
+        <img
+          src="bootstrap.svg"
+          class="card-img-top px-4 py-2"
+          alt="Bootstrap 4 Logo"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content.
+            <span id="moreText" class="collapse">
+              This content is a little bit longer and will be displayed when the
+              "View" button is clicked. You can put any additional text here.
+            </span>
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary"
+                data-toggle="collapse"
+                data-target="#moreText"
+                aria-expanded="false"
+                aria-controls="moreText"
+              >
+                View
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                Edit
+              </button>
+            </div>
+            <small class="text-muted">9 mins</small>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
