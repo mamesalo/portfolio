@@ -3,46 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>]Document</title>
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
   </head>
-  <body>
-    <div class="container mt-5">
-      <div class="card" style="width: 18rem">
-        <img
-          src="bootstrap.svg"
-          class="card-img-top px-4 py-2"
-          alt="Bootstrap 4 Logo"
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content.
-            <span id="moreText" class="collapse">
-              This content is a little bit longer and will be displayed when the
-              "View" button is clicked. You can put any additional text here.
-            </span>
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button
-                type="button"
-                class="btn btn-sm btn-outline-secondary"
-                data-toggle="collapse"
-                data-target="#moreText"
-                aria-expanded="false"
-                aria-controls="moreText"
-              >
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-muted">9 mins</small>
+  <body class="bg-light">
+    <div
+      class="container d-flex justify-content-center align-items-center mt-5"
+    >
+      <div class="card p-4 border border-primary" style="width: 20rem">
+        <div class="text-center mb-4">
+          <img src="bootstrap.svg" alt="Logo" width="72" height="72" />
+        </div>
+        <h5 class="text-center mb-3">Please sign in</h5>
+        <form>
+          <div class="">
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              placeholder="Email address"
+              required
+            />
           </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="mb-3 form-check d-flex gap-2 justify-content-center">
+            <input type="checkbox" class="form-check-input" id="rememberMe" />
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Sign in</button>
+        </form>
+        <div class="text-center mt-2 text-muted">
+          <small>© 2017-2020</small>
         </div>
       </div>
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
