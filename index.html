@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Create Account</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -11,151 +11,59 @@
     />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light border-primary border-bottom p-3"
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="min-height: 100vh"
     >
-      <a class="navbar-brand" href="#">Company name</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-          <li class="nav-item">
-            <a class="btn btn-outline-primary" href="#">Sign up</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <div class="row w-75 shadow-lg">
+        <!-- Left Section -->
+        <div
+          class="col-md-6 bg-warning d-flex justify-content-center align-items-center p-2"
+        >
+          <h2 class="text-dark">Create Account Now</h2>
+        </div>
 
-    <!-- Pricing Section -->
-    <div class="container text-center my-5">
-      <h1 class="display-4">Pricing</h1>
-      <p class="lead mx-auto mb-5" style="max-width: 590px">
-        Quickly build an effective pricing table for your potential customers
-        with this Bootstrap example. Its built with default Bootstrap components
-        and utilities with little customization.
-      </p>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card mb-4 shadow-sm border border-primary">
-            <div class="card-header border-primary">
-              <h4 class="my-0 font-weight-normal">Free</h4>
+        <!-- Right Section (Form) -->
+        <div class="col-md-6 bg-dark text-white p-4">
+          <form class="d-flex flex-column">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name</label>
+              <input type="text" class="form-control" id="name" />
             </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">
-                $0 <small class="text-muted">/ mo</small>
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>10 users included</li>
-                <li>2 GB of storage</li>
-                <li>Email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button
-                type="button"
-                class="btn btn-lg btn-block btn-outline-primary"
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword"
+                ><i class="fas fa-lock"></i> Confirm Password</label
               >
-                Sign up for free
-              </button>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+              />
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card mb-4 shadow-sm border border-primary">
-            <div class="card-header border-primary">
-              <h4 class="my-0 font-weight-normal">Pro</h4>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="rememberMe" />
+              <label class="form-check-label" for="rememberMe"
+                >Remember me</label
+              >
             </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">
-                $15 <small class="text-muted">/ mo</small>
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>20 users included</li>
-                <li>10 GB of storage</li>
-                <li>Priority email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" class="btn btn-lg btn-block btn-primary">
-                Get started
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card mb-4 shadow-sm border border-primary">
-            <div class="card-header border-primary">
-              <h4 class="my-0 font-weight-normal">Enterprise</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">
-                $29 <small class="text-muted">/ mo</small>
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>30 users included</li>
-                <li>15 GB of storage</li>
-                <li>Phone and email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" class="btn btn-lg btn-block btn-primary">
-                Contact us
-              </button>
-            </div>
-          </div>
+            <button type="submit" class="btn btn-warning align-self-end">
+              Register
+            </button>
+          </form>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="container py-5">
-      <div class="row">
-        <div class="col-12 col-md">
-          <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Cool stuff</a></li>
-            <li><a class="text-muted" href="#">Random feature</a></li>
-            <li><a class="text-muted" href="#">Team feature</a></li>
-            <li><a class="text-muted" href="#">Stuff for developers</a></li>
-            <li><a class="text-muted" href="#">Another one</a></li>
-            <li><a class="text-muted" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Resource</a></li>
-            <li><a class="text-muted" href="#">Resource name</a></li>
-            <li><a class="text-muted" href="#">Another resource</a></li>
-            <li><a class="text-muted" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Team</a></li>
-            <li><a class="text-muted" href="#">Locations</a></li>
-            <li><a class="text-muted" href="#">Privacy</a></li>
-            <li><a class="text-muted" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
