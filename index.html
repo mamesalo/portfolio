@@ -1,72 +1,1291 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Account</title>
-    <!-- Bootstrap CSS -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
-    <div
-      class="container d-flex justify-content-center align-items-center"
-      style="min-height: 100vh"
-    >
-      <div class="row w-75 shadow-lg">
-        <!-- Left Section -->
-        <div
-          class="col-md-6 bg-warning d-flex justify-content-center align-items-center p-2"
-        >
-          <h2 class="text-dark">Create Account Now</h2>
-        </div>
 
-        <!-- Right Section (Form) -->
-        <div class="col-md-6 bg-dark text-white p-4">
-          <form class="d-flex flex-column">
-            <div class="form-group">
-              <label for="name"><i class="fas fa-user"></i> Name</label>
-              <input type="text" class="form-control" id="name" />
-            </div>
-            <div class="form-group">
-              <label for="email"><i class="fas fa-envelope"></i> Email</label>
-              <input type="email" class="form-control" id="email" />
-            </div>
-            <div class="form-group">
-              <label for="password"><i class="fas fa-lock"></i> Password</label>
-              <input type="password" class="form-control" id="password" />
-            </div>
-            <div class="form-group">
-              <label for="confirmPassword"
-                ><i class="fas fa-lock"></i> Confirm Password</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="confirmPassword"
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <div class="profile-img">
+        <img
+          src="assets/img/profile-face.jpg"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
+      </div>
+
+      <a
+        href="index.html"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Mohammed Saleh</h1>
+      </a>
+
+      <div class="social-links text-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio"
+              ><i class="bi bi-journal-richtext navicon"></i> Projects</a
+            >
+          </li>
+
+          <li>
+            <a href="#contact"
+              ><i class="bi bi-envelope navicon"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <img src="assets/img/hero-bg.jpg" alt="" class="" />
+
+        <div class="container">
+          <h2>Mohammed Saleh</h2>
+          <p>
+            I'm
+            <span class="typed" data-typed-items="Full Stack Developer"
+              >Full Stack Developer</span
+            >
+          </p>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>About</h2>
+          <p>
+            Versatile IT professional with experience in cloud computing, web
+            development, and IT support. Proven ability to design and implement
+            cloud solutions, develop web applications, and provide technical
+            support. Adept at collaborating with cross-functional teams to
+            deliver high-quality projects on time.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img
+                src="assets/img/profile.jpg"
+                alt=""
+                style="height: 100%; width: 100%; object-fit: cover"
               />
             </div>
-            <div class="form-check mb-3">
-              <input type="checkbox" class="form-check-input" id="rememberMe" />
-              <label class="form-check-label" for="rememberMe"
-                >Remember me</label
-              >
+            <div class="col-lg-8 content">
+              <h2 style="margin-bottom: 20px">
+                Cloud Computing &amp; Web Developer.
+              </h2>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Birthday:</strong> <span>11 Jan 1999</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Phone:</strong> <span>+251 929 951 773</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Addis Ababa, Ethiopia</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
+                      <span>25</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Degree:</strong> <span>Computer Science</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Email:</strong>
+                      <span>mamesalo7337@gmail.com</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Current:</strong> <span>Traning</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <button type="submit" class="btn btn-warning align-self-end">
-              Register
-            </button>
-          </form>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Resume</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Sumary</h3>
+
+              <div class="resume-item pb-0">
+                <h4>Mohammed Saleh</h4>
+                <p>
+                  <em
+                    >Versatile IT professional with experience in cloud
+                    computing, web development, and IT support. Proven ability
+                    to design and implement cloud solutions, develop web
+                    applications, and provide technical support. Adept at
+                    collaborating with cross-functional teams to deliver
+                    high-quality projects on time .</em
+                  >
+                </p>
+                <ul>
+                  <li>Mekanisa, Addis Ababa, Ethiopia</li>
+                  <li>(251) 929-9517-73</li>
+                  <li>mamesalo7337@gmail.com</li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <h3 class="resume-title">Education</h3>
+
+              <div class="resume-item">
+                <h4>Bachelor's Degree in Computer Science</h4>
+                <h5>2018 - 2022</h5>
+                <p><em>Admas University, Addis Ababa, Ethipoia</em></p>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
+
+            <div class="col-lg-6">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Cloud Practitioner</h4>
+                <h5>Oct 2022 - Mar 2024</h5>
+                <p><em>Nedamco Africa, Addis Ababa, Ethiopia </em></p>
+                <ul>
+                  <li>
+                    Designed and implemented scalable, secure cloud solutions.
+                  </li>
+                  <li>Managed and optimized cloud usage and costs</li>
+                  <li>
+                    Implemented cloud security best practices, including IAM and
+                    data encryption
+                  </li>
+                  <li>
+                    Developed automation scripts to streamline operations.
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>IT Support Intern</h4>
+                <h5>Jan 2021 - Mar 2021</h5>
+                <p>
+                  <em>SafeLine Recruitment Agency, Addis Ababa, Ethiopia</em>
+                </p>
+                <ul>
+                  <li>Guided users through detailed hardware installation</li>
+                  <li>
+                    set up equipment based on staff needs and IT capabilities
+                  </li>
+                  <li>
+                    Supported non-technical users by investigating and solving
+                    hardware and software issues
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Resume Section -->
+      <!-- Skills Section -->
+      <section id="skills" class="skills section light-background">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Skills</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row skills-content skills-animation">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>HTML</span> <i class="val">100%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>CSS</span> <i class="val">90%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>JavaScript</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
+
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>AWS/Azure</span> <i class="val">50%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>React</span> <i class="val">90%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>problem Solving</span> <i class="val">100%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- language Section -->
+      <section id="skills" class="skills section light-background">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Languages</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row skills-content skills-animation">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>Arabic</span> <i class="val">100%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>English</span> <i class="val">70%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>Amharic</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /language Section -->
+
+      <!-- certificate Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Certificate</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex gap-2 align-items-center"
+            >
+              <img
+                src="assets/img/azure-certified-associate.webp"
+                class="Certificate-img"
+                alt=""
+              />
+              <h4 class="title">
+                <a class="">Microsoft Azure Administrator Associate</a>
+              </h4>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex gap-2 align-items-center"
+            >
+              <img
+                src="assets/img/azure-fundimental.png"
+                class="Certificate-img"
+                alt=""
+              />
+              <h4 class="title">
+                <a class="">Microsoft Azure</a>
+              </h4>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex gap-2 align-items-center"
+            >
+              <img
+                src="assets/img/AWS-Certified-Cloud-Practitioner.png"
+                class="Certificate-img"
+                alt=""
+              />
+              <h4 class="title">
+                <a class="">AWS Certified Cloud Practitioner</a>
+              </h4>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex gap-2 align-items-center"
+            >
+              <img
+                src="assets/img/aws-re-start.png"
+                class="Certificate-img"
+                alt=""
+              />
+              <h4 class="title">
+                <a class="">AWS re/start</a>
+              </h4>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /certificate Section -->
+
+      <!-- project Section -->
+      <section id="portfolio" class="portfolio section light-background">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Project</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="isotope-layout">
+            <div class="row gy-4 isotope-container">
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-1.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 1</h4>
+                    <p>HTML</p>
+                    <a
+                      href="assets/img/portfolio/project-1.png"
+                      title="Project 1"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-1/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-2.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 2</h4>
+                    <p>Html</p>
+                    <a
+                      href="assets/img/portfolio/project-2.png"
+                      title="Project 2"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-2/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-3.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 3</h4>
+                    <p>HTML</p>
+                    <a
+                      href="assets/img/portfolio/project-3.png"
+                      title="Project 3"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-3/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-4.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 4</h4>
+                    <p>Html</p>
+                    <a
+                      href="assets/img/portfolio/project-4.png"
+                      title="Project 4"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-5/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-5.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 5</h4>
+                    <p>HTML & CSS</p>
+                    <a
+                      href="assets/img/portfolio/project-5.png"
+                      title="Project 5"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-4/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-6.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 6</h4>
+                    <p>HTML</p>
+                    <a
+                      href="assets/img/portfolio/project-6.png"
+                      title="Project 6"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-6/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-7.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 7</h4>
+                    <p>HTML</p>
+                    <a
+                      href="assets/img/portfolio/project-7.png"
+                      title="project 7"
+                      data-gallery="portfolio-gallery-branding"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-7/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-8.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 8</h4>
+                    <p>HTML</p>
+                    <a
+                      href="assets/img/portfolio/project-8.png"
+                      title="Project 8"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-8/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-9.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 9</h4>
+                    <p>HTML & CSS</p>
+                    <a
+                      href="assets/img/portfolio/project-9.png"
+                      title="Project 9"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-9/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-10.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 10</h4>
+                    <p>HTML & CSS</p>
+                    <a
+                      href="assets/img/portfolio/project-10.png"
+                      title="Project 10"
+                      data-gallery="portfolio-gallery-product"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-10/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-11.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 11</h4>
+                    <p>HTML & CSS</p>
+                    <a
+                      href="assets/img/portfolio/project-11.png"
+                      title="Project 11"
+                      data-gallery="portfolio-gallery-branding"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-11/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-12.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 12</h4>
+                    <p>HTML & CSS</p>
+                    <a
+                      href="assets/img/portfolio/project-12.png"
+                      title="Project 12"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-12/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-13.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 13</h4>
+                    <p>HTML & Bootstrap</p>
+                    <a
+                      href="assets/img/portfolio/project-13.png"
+                      title="Project 13"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-13/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-14.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 14</h4>
+                    <p>HTML & Bootstrap</p>
+                    <a
+                      href="assets/img/portfolio/project-14.png"
+                      title="Project 14"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-14/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-15.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 15</h4>
+                    <p>HTML & Bootstrap</p>
+                    <a
+                      href="assets/img/portfolio/project-15.png"
+                      title="Project 15"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-15/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-16.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 16</h4>
+                    <p>HTML & Bootstrap</p>
+                    <a
+                      href="assets/img/portfolio/project-16.png"
+                      title="Project 16"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-16/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-17.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 17</h4>
+                    <p>HTML & Bootstrap</p>
+                    <a
+                      href="assets/img/portfolio/project-17.png"
+                      title="Project 17"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-17/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+              >
+                <div class="portfolio-content h-100">
+                  <img
+                    src="assets/img/portfolio/project-18.png"
+                    class="img-project"
+                    alt=""
+                  />
+                  <div class="portfolio-info">
+                    <h4>Project 18</h4>
+                    <p>HTML & Bootstrap</p>
+                    <a
+                      href="assets/img/portfolio/project-18.png"
+                      title="Project 18"
+                      data-gallery="portfolio-gallery-book"
+                      class="glightbox preview-link"
+                      target="_blank"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                    <a
+                      href="https://mamesalo.github.io/dot-task-18/"
+                      title="More Details"
+                      class="details-link"
+                      target="_blank"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+      <!-- Testimonials Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Contact</h2>
+          <p>
+            For any further information about me, feel free to send me an E-mail
+            message.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="info-wrap">
+                <div class="info-item d-flex">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>Mekanisa, Addis Ababa, Ethiopia</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div class="info-item d-flex">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Me</h3>
+                    <p>+251 929 9517 73</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div class="info-item d-flex">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Me</h3>
+                    <p>mamesalo7337@gmail.com</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63052.62655836578!2d38.7055616!3d8.991539200000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1726257060261!5m2!1sen!2set"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 270px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <label for="name-field" class="pb-2">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name-field"
+                      class="form-control"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email-field" class="pb-2">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email-field"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="subject-field" class="pb-2">Subject</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject-field"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="message-field" class="pb-2">Message</label>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="10"
+                      id="message-field"
+                      required=""
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">mamesalo</strong>
+          </p>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/mohammed-saleh-27787624a/"
+            >Mohammed Saleh</a
+          >
         </div>
       </div>
-    </div>
+    </footer>
 
-    <!-- FontAwesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Scroll Top -->
+
+    <!-- Preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
