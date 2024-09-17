@@ -611,7 +611,11 @@ section,
   font-weight: 700;
   font-size: 24px;
 }
-
+.about-img {
+  height: 300px;
+  width: 300px;
+  object-position: center;
+}
 .about .content ul {
   list-style: none;
   padding: 0;
